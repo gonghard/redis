@@ -91,3 +91,4 @@
 	redis-cli -p 7000 shutdown
 	redis-cli -p 7002 shutdown
 	......
+14.再次启动会自动集群
