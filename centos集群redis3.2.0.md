@@ -41,6 +41,7 @@
     sed -i 's/# cluster-enabled yes/cluster-enabled yes/g' /usr/local/redis/cluster/7000/redis.conf
     sed -i 's/# cluster-node-timeout 15000/cluster-node-timeout 15000/g' /usr/local/redis/cluster/7000/redis.conf
     sed -i "s/# cluster-config-file node.*/cluster-config-file nodes-redis.conf/g" /usr/local/redis/cluster/7000/redis.conf
+    启动服务之前，最好是将bind属性设置成redis-server所在服务器的物理地址ip
     redis-server /usr/local/redis/cluster/7000/redis.conf
     只需将7000依次换成7002  7003  7004  7005  7006再执行5次即可
 8.执行ps -ef|grep redis
